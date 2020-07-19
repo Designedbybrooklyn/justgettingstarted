@@ -1,0 +1,91 @@
+/*Hero Section Styles*/
+
+.hero-section{
+    background-image: url(../Images/Backgrounds/fries-hero-bg.jpg);
+    padding: 100px;
+    height: 300px;
+        /*Fixed - instead of sliding up and down like normal, it stays in one place*/
+    background-attachment: fixed;
+        /*makes the majority of the middle of the image to be shown*/
+    background-position: center;
+        /*by default images repeat, if you want just one, you must declare no-repeat*/
+    background-repeat: no-repeat;
+        /*takes the image shrinks/crops it. it maintains the aspect ratio of the original picture */
+    background-size: cover;
+}
+
+.hero-section > .top-heading {
+    padding: 1px 20px;
+    background-color: #11122b;
+    color: #cbcbcb;
+    width: 290px;
+    border-radius: 2px;
+}
+
+.hero-section > .bottom-heading {
+    background-color: #cea135;
+    color: #11122b;
+    padding: 1px 20px;
+    margin-top: 15px;
+    width: 107px;
+    border-radius: 2px;
+}
+
+/*Features Section styles*/
+.features-section{
+    height: 400px;
+    background-image: url(../Images/Backgrounds/fries-multiply-bg.jpg);
+    background-color: #cea135;
+    border-top: 10px solid white;
+    color: #11122b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "ubuntu condensed", sans-serif;
+    /*inset- showing the values
+    1st - horizontal length 2nd - vertical length 3rd - Blur redius 
+    4th - spread radius (how tall or wide the shadow needs to be. 
+    rgba(red/green/blue/opacity(meaning the transparency)*/
+    box-shadow: inset 0px -26px 79px -8px rgba(0, 0, 0, 0.58);
+    /*there are two main box-shadows- on is simply 'box-shadow:x x x x rgba' which shows on the outside
+    or "box-shadow: inset x x x x rbga" which shows a shadow on the inside*/
+}
+
+.features-section > .columns-wrapper {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.features-section > .columns-wrapper > .column {
+    padding: 20px;
+    margin: 42px;
+    text-align: center;
+    border-bottom: 5px solid transparent;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.features-section > .columns-wrapper > .column:hover {
+    border-bottom: 5px solid #11122b;
+}
+
+.features-section > .columns-wrapper > .column :nth-child(1){
+    font-size: 3em;
+}
+
+.features-section > .columns-wrapper > .column :nth-child(2){
+    font-size: 1.5em;
+    font-weight: 900;
+    height: 50px;
+    transition: 1s;
+}
+
+.features-section > .columns-wrapper > .column :nth-child(2):hover{
+    letter-spacing: 1px;
+
+}
+
+.features-section > .columns-wrapper > .column :nth-child(3){
+    letter-spacing: 2px;
+}
